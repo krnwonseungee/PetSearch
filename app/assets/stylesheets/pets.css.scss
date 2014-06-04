@@ -10,3 +10,26 @@
 #prof-link {
   float: right
 }
+
+#back-link {
+  float: right;
+  margin-right: 18%
+}
+
+#pet-name {
+  margin-left: 10%
+}
+
+.general-info {
+
+  width: 500px;
+  height: 250px;
+
+  .box {
+    float: left
+  }
+
+  .org-info {
+    float: right
+  }
+}
