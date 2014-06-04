@@ -5,18 +5,14 @@
 
 		<% @pets.each do |pet| %>
 			<div id="animal-box">
-						<p><img src="http://placehold.it/200X250"></p>
-						<p><%= pet.name %><%= link_to 'profile', pet, { class: 'btn' } %></p>
-
-						<p><%= pet.primary_breed %> - <%= pet.secondary_breed %></p>
-
-						<p><%= pet.age %></p>
-						<p><%= pet.gender %> </p>
-
-						<p><%= pet.contact_city %> </p>
-						<p><%= pet.contact_state %> </p>
-				</div>
-			<% end %>
+				<p><img src="http://placehold.it/200X250"></p>
+				<h3><%= pet.name %><%= link_to 'profile', pet, { class: 'btn', id: 'prof-link' } %></h3>
+				<p><%= pet.primary_breed %> - <%= pet.secondary_breed %></p>
+				<p><%= pet.age %></p>
+				<p><%= pet.gender %> </p>
+				<p><%= pet.contact_city %>, <%= pet.contact_state %> </p>
+			</div>
+		<% end %>
 
 <br>
 
