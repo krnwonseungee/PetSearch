@@ -1,0 +1,65 @@
+<h1>Pets</h1>
+total <%= @pets.size %> pets found
+<table>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>age</th>
+      <th>size</th>
+      <th>gender</th>
+      <th>size</th>
+      <th>species</th>
+      <th>status</th>
+      <th>organization_name</th>
+      <th>is_housebroken</th>
+      <th>is_housetrained</th>
+      <th>is_hypoallergenic</th>
+      <th>tail</th>
+      <th>color</th>
+      <th>breed</th>
+      <th>hair_length</th>
+      <th>street_address</th>
+      <th>city</th>
+      <th>state</th>
+      <th>zipcode</th>
+      <th>phone</th>
+      <th>fax</th>
+      <th>email</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pets.each do |pet| %>
+    <tr>
+      <td><%= pet.name %></td>
+      <td><%= pet.age %></td>
+      <td><%= pet.size %></td>
+      <td><%= pet.gender %> </td>
+      <td><%= pet.size %> </td>
+      <td><%= pet.species %> </td>
+      <td><%= pet.status   %> </td>
+      <td><%= pet.organization_name %> </td>
+      <td><%= pet.is_housebroken %> </td>
+      <td><%= pet.is_housetrained %> </td>
+      <td><%= pet.is_hypoallergenic %> </td>
+      <td><%= pet.tail %> </td>
+      <td><%= pet.color %> </td>
+      <td><%= pet.primary_breed %> - <%= pet.secondary_breed %></td>
+      <td><%= pet.hair_length %> </td>
+      <td><%= pet.contact_street_address %> </td>
+      <td><%= pet.contact_city %> </td>
+      <td><%= pet.contact_state %> </td>
+      <td><%= pet.contact_zipcode %> </td>
+      <td><%= pet.contact_phone %> </td>
+      <td><%= pet.contact_fax %> </td>
+      <td><%= pet.contact_email %> </td>
+      <td></td>
+      <td><%= link_to 'profile', pet, { class: 'btn' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pet', new_pet_path %>
