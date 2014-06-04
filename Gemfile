@@ -33,6 +33,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# Integrates Bootstrap pagination feature with Rails
+gem 'will_paginate-bootstrap'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
