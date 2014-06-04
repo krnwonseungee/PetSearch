@@ -20,16 +20,19 @@
   margin-left: 10%
 }
 
-.general-info {
+.general-info-box {
 
   width: 500px;
   height: 250px;
 
-  .box {
+  .column {
     float: left
   }
 
-  .org-info {
+  .column-org-info- {
     float: right
   }
+
 }
+
+

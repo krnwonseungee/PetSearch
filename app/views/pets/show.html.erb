@@ -9,8 +9,8 @@
 <img src="http://placehold.it/200X250">
 
 
-<div class="general-info">
-  <div class="box">
+<div class="general-info-box">
+  <div class="column">
     <strong class="title">
       Location
     </strong>
@@ -26,7 +26,7 @@
     </div>
   </div>
 
-  <div class="org-info">
+  <div class="column-org-info">
     <strong class="title">
       Organization Contact
     </strong>
@@ -39,7 +39,11 @@
       <%= @pet.contact_email %><br>
     </div>
   </div>
+</div>
 
+<div class="description-box">
+  <h3><%= @pet.name %>'s Story</h3>
+  <p><%= @pet.description %></p>
 </div>
 
 <table class="table-striped">
@@ -51,7 +55,6 @@
   <tbody>
   <tr><td>Age </td><td> <%= @pet.age  %></td></tr>
   <tr><td>Size </td><td> <%= @pet.size %></td></tr>
-  <tr><td>Description </td><td> <%= @pet.description %></td></tr>
   <tr><td>Housebroken? </td><td> <%= @pet.is_housebroken %></td></tr>
   <tr><td>Housetrained? </td><td> <%= @pet.is_housetrained %></td></tr>
   <tr><td>Hypoallergenic? </td><td> <%= @pet.is_hypoallergenic %></td></tr>
