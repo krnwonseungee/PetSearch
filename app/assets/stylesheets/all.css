@@ -1,0 +1,708 @@
+@font-face {
+    font-family: 'latobold';
+    src: url("../signup/lato-bol-webfont.eot");
+    src: url("../signup/lato-bol-webfont.eot?#iefix") format("embedded-opentype"), url("../signup/lato-bol-webfont.woff") format("woff"), url("../signup/lato-bol-webfont.ttf") format("truetype"), url("../signup/lato-bol-webfont.svg#latobold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'latolight';
+    src: url("../signup/lato-lig-webfont.eot");
+    src: url("../signup/lato-lig-webfont.eot?#iefix") format("embedded-opentype"), url("../signup/lato-lig-webfont.woff") format("woff"), url("../signup/lato-lig-webfont.ttf") format("truetype"), url("../signup/lato-lig-webfont.svg#latolight") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'latoregular';
+    src: url("../signup/lato-reg-webfont.eot");
+    src: url("../signup/lato-reg-webfont.eot?#iefix") format("embedded-opentype"), url("../signup/lato-reg-webfont.woff") format("woff"), url("../signup/lato-reg-webfont.ttf") format("truetype"), url("../signup/lato-reg-webfont.svg#latoregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'latoitalic';
+    src: url("../signup/lato-regita-webfont.eot");
+    src: url("../signup/lato-regita-webfont.eot?#iefix") format("embedded-opentype"), url("../signup/lato-regita-webfont.woff") format("woff"), url("../signup/lato-regita-webfont.ttf") format("truetype"), url("../signup/lato-regita-webfont.svg#latoitalic") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'whitney-bold_scregular';
+    src: url("../signup/whitney-boldsc-webfont.eot");
+    src: url("../signup/whitney-boldsc-webfont.eot?#iefix") format("embedded-opentype"), url("../signup/whitney-boldsc-webfont.woff") format("woff"), url("../signup/whitney-boldsc-webfont.ttf") format("truetype"), url("../signup/whitney-boldsc-webfont.svg#whitney-bold_scregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@media (min-width: 768px) {
+    #main .container {
+    width: 750px;
+}
+}@media (min-width: 992px) {
+    #main .container {
+    width: 1280px;
+}
+}@media (min-width: 1200px) {
+    #main .container {
+    width: 1280px;
+}
+}.help-inline {
+    color: red;
+}
+@-webkit-viewport {
+    width: device-width;
+}
+@-moz-viewport {
+    width: device-width;
+}
+@-ms-viewport {
+    width: device-width;
+}
+@-o-viewport {
+    width: device-width;
+}
+@viewport {
+    width: device-width;
+}
+header, footer, article, section, hgroup, nav, figure {
+    display: block;
+}
+figure {
+    margin: 0;
+    padding: 0;
+}
+q {
+    quotes: none;
+}
+q:before, q:after {
+    content: ""}
+* {
+    max-height: 1000000px;
+}
+body {
+    margin: 0;
+    min-width: 1000px;
+    background: #0072bc;
+    -ms-text-size-adjust: none;
+    -webkit-text-size-adjust: 100%}
+img {
+    border-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:active {
+    background-color: transparent;
+}
+input, textarea, select {
+    color: #000;
+    vertical-align: middle;
+    font: 100% Arial,  Helvetica,  sans-serif;
+}
+form, fieldset {
+    margin: 0;
+    padding: 0;
+    border-style: none;
+}
+input[type=text], input[type=checkbox], input[type=password], input[type=file], input[type=submit], textarea {
+    -webkit-appearance: none;
+    border-radius: 0 !important;
+    -ms-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+}
+#wrapper {
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+}
+#header {
+    color: #fff;
+    position: relative;
+    font: 18px/21px 'latobold',  Arial,  Helvetica,  sans-serif;
+}
+#header .header-holder {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    position: absolute;
+}
+#header .header-frame {
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 1194px;
+}
+#header .header-info {
+    overflow: hidden;
+    padding: 0 0 29px;
+}
+#header .logo {
+    float: left;
+    width: 186px;
+    height: 179px;
+    overflow: hidden;
+    text-indent: -9999px;
+    background: url("../signup/logo.png") no-repeat;
+}
+#header .logo a {
+    height: 100%;
+    display: block;
+}
+#header .main-img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+#header .social-networks {
+    float: right;
+    margin: 37px -6px 0 10px;
+}
+#header h1 {
+    color: #fff;
+    margin: 0 0 10px;
+    letter-spacing: -0.3px;
+    font: 37px/40px 'whitney-bold_scregular',  Arial,  Helvetica,  sans-serif;
+}
+#header h1 span {
+    color: #48c7f1;
+}
+#header p {
+    margin: 0 0 30px;
+}
+#header .btn-area {
+    overflow: hidden;
+}
+.btn {
+    color: #fff;
+    font-size: 15px;
+    line-height: 18px;
+    background: #0072bc;
+    vertical-align: top;
+    letter-spacing: -0.7px;
+    padding: 15px 12px;
+}
+.btn:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.btn:active {
+    background: #0072bc;
+}
+.btn strong {
+    display: block;
+    margin: 4px 0 0;
+    text-transform: uppercase;
+    font: 16px/19px 'whitney-bold_scregular',  Arial,  Helvetica,  sans-serif;
+}
+.btn.btn-demo {
+    color: #fff;
+    font-size: 14px;
+    min-width: 220px;
+    line-height: 17px;
+    margin: 0 12px 0 0;
+    background: #48c7f1;
+    padding: 9px 12px 14px;
+    letter-spacing: normal;
+}
+.btn.btn-demo:active {
+    background: #48c7f1;
+}
+.btn.btn-demo strong {
+    display: block;
+    margin: 6px 0 0;
+    font: 32px/25px 'whitney-bold_scregular',  Arial,  Helvetica,  sans-serif;
+}
+.social-networks {
+    width: 244px;
+    overflow: hidden;
+}
+.social-networks .title {
+    float: left;
+    color: #fff;
+    margin: 0 17px 0 0;
+    text-transform: capitalize;
+    font: 20px/23px 'whitney-bold_scregular',  Arial,  Helvetica,  sans-serif;
+}
+.social-networks ul {
+    margin: 0;
+    padding: 2px 0 0;
+    list-style: none;
+    overflow: hidden;
+}
+.social-networks ul li {
+    float: left;
+    margin: 0 11px 0 0;
+}
+.social-networks ul li a {
+    width: 18px;
+    height: 20px;
+    display: block;
+    overflow: hidden;
+    text-indent: -9999px;
+    background: url(../signup/sprite-icons.png) no-repeat;
+}
+.social-networks ul li.twitter {
+    margin: 2px 10px 0 0;
+}
+.social-networks ul li.twitter a {
+    width: 19px;
+    height: 17px;
+    background-position: -29px 0;
+}
+.social-networks ul li.instagram {
+    margin: 0 11px 0 0;
+}
+.social-networks ul li.instagram a {
+    background-position: -59px 0;
+}
+.social-networks ul li.youtube {
+    margin: 0 9px 0 0;
+}
+.social-networks ul li.youtube a {
+    width: 19px;
+    background-position: -88px 0;
+}
+#main {
+    position: relative;
+}
+#footer .area, #main .title-area {
+    text-align: center;
+    padding: 8px 9999px;
+    margin: 0 -9999px 24px;
+    background: url(../signup/pattern.png);
+}
+#main .title-area h1 {
+    margin: 0;
+    color: #0072bc;
+    text-transform: uppercase;
+    font: 22px/26px 'whitney-bold_scregular',  Arial,  Helvetica,  sans-serif;
+}
+.articles-holder {
+    padding: 0 0 12px;
+    text-align: center;
+}
+.articles-holder .article {
+    min-height: 225px;
+    line-height: 20px;
+    background: url(../signup/border.png) no-repeat 0 50%}
+.articles-holder .article:first-child {
+    background: none;
+}
+.articles-holder .article .box {
+    padding: 0 10px;
+}
+.articles-holder .article h2 {
+    margin: 0 0 22px;
+    font: 22px/20px 'whitney-bold_scregular',  Arial,  Helvetica,  sans-serif;
+}
+.articles-holder .article h2 a {
+    color: #48c7f1;
+}
+#footer {
+    color: #fff;
+    text-align: center;
+    background: #0072bc;
+    font: 11px/14px Arial,  Helvetica,  sans-serif;
+}
+#footer a {
+    color: #fff;
+}
+#footer .area {
+    letter-spacing: 0.2px;
+    margin: 0 -9999px 12px;
+    padding: 12px 9999px 12px 9995px;
+    font: 18px/21px 'whitney-bold_scregular',  Arial,  Helvetica,  sans-serif;
+}
+#footer .area .link {
+    color: #0072bc;
+    font-weight: bold;
+    padding: 0 23px 0 0;
+    vertical-align: top;
+    position: relative;
+    display: inline-block;
+    font-variant: small-caps;
+}
+#footer .area .link:after {
+    top: 50%;
+    right: 0;
+    width: 16px;
+    content: '';
+    height: 16px;
+    margin: -8px 0 0;
+    position: absolute;
+    background: url(../signup/sprite-icons.png) no-repeat -117px 0;
+}
+#footer .info li {
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 13px 0 15px;
+    background: url(../signup/divider.png) no-repeat 0 50%}
+#footer .info li:first-child {
+    background: none;
+}
+#footer .info .tel {
+    cursor: text;
+    text-decoration: none;
+}
+.form-holder {
+    color: #fff;
+    width: 990px;
+    background: none;
+    text-align: center;
+    margin: 0 auto;
+    padding: 57px 10px;
+}
+.modal.add .close {
+    top: 37px;
+    right: 45px;
+    width: 22px;
+    height: 26px;
+    z-index: 999;
+    overflow: hidden;
+    opacity: 1;
+    -ms-opacity: 1;
+    -o-opacity: 1;
+    position: fixed;
+    -webkit-opacity: 1;
+    text-indent: -9999px;
+    background: url(../signup/sprite-icons.png) no-repeat -33px -30px;
+}
+.form-holder .modal-content {
+    border: 0;
+    background: none;
+    box-shadow: none;
+    position: static;
+    -webkit-box-shadow: none;
+}
+.form-holder h1 {
+    color: #fff;
+    margin: 0 0 21px;
+    font: small-caps 30px/34px 'whitney-bold_scregular',  Arial,  Helvetica,  sans-serif;
+}
+.form-holder h1:after {
+    width: 23px;
+    height: 22px;
+    content: '';
+    margin: 6px 6px 0 8px;
+    vertical-align: top;
+    display: inline-block;
+    background: url(../signup/sprite-icons.png) no-repeat 0 -30px;
+}
+.form-signup abbr[title] {
+    float: right;
+}
+.form-signup {
+    color: #48c7f1;
+    font: 16px/19px 'latoitalic',  Arial,  Helvetica,  sans-serif;
+}
+.form-signup h2 {
+    color: #fff;
+    margin: 0 2px 6px 0;
+    text-transform: uppercase;
+    font: 16px/19px 'latoregular',  Arial,  Helvetica,  sans-serif;
+}
+.form-signup p {
+    margin: 0 0 21px;
+}
+.form-signup .block.last p {
+    margin: 0 0 13px;
+}
+.form-signup .block {
+    padding: 0 0 39px;
+}
+.form-signup .block.last {
+    margin: -4px 0 0;
+}
+.form-signup .field-holder {
+    margin: 0 auto;
+    max-width: 630px;
+    text-align: left;
+}
+.form-signup .field-area {
+    overflow: hidden;
+    padding: 12px 0 0;
+}
+.form-signup .field-area:first-child {
+    padding: 0;
+}
+.form-signup .field-area.check-holder {
+    padding: 24px 0 0;
+}
+.form-signup .col {
+    float: right;
+    width: 47.69475357710652%}
+.form-signup .col:first-child {
+    float: left;
+}
+.form-signup input[type="email"], .form-signup input[type="tel"], .form-signup input[type="text"] {
+    border: 0;
+    margin: 0;
+    float: left;
+    width: 100%;
+    height: 40px;
+    padding: 12px 5px;
+    background: #fff;
+    font: 13px/16px 'latoregular',  Arial,  Helvetica,  sans-serif;
+}
+.form-signup input[type="email"] {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.form-signup label {
+    color: #fff;
+    margin: 0 0 7px;
+    vertical-align: top;
+    display: inline-block;
+    font-family: 'latobold',  Arial,  Helvetica,  sans-serif;
+}
+.form-signup .label-holder {
+    display: block;
+    overflow: hidden;
+    padding: 5px 0 0;
+}
+.form-signup .large .col {
+    width: 100%}
+.form-signup .date {
+    float: right;
+    width: 45%}
+.form-signup .date:first-child {
+    float: left;
+}
+.form-signup .select-holder {
+    overflow: hidden;
+}
+.form-signup input[type="submit"] {
+    border: 0;
+    padding: 0;
+    color: #fff;
+    width: 150px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    background: #48c7f1;
+    border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    font: 20px/50px 'whitney-bold_scregular',  Arial,  Helvetica,  sans-serif;
+}
+.form-signup .block.last .field-area.large {
+    padding: 40px 0 8px;
+}
+.jcf-hidden {
+    display: block !important;
+    position: absolute !important;
+    left: -9999px !important;
+}
+.chk-area {
+    float: left;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    padding: 9px 3px;
+    margin: 0 14px 0 0;
+}
+.chk-checked {
+    background: #48c7f1;
+}
+.chk-checked span {
+    width: 12px;
+    height: 12px;
+    display: block;
+    margin: 0 auto;
+    background: url(../signup/sprite-icons.png) no-repeat -65px -30px;
+}
+.chk-disabled {
+    background: #eee;
+}
+.jcf-label-disabled {
+    color: #ccc;
+}
+.select-area {
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    height: 40px;
+    float: left;
+    background: #fff;
+    width: 100% !important;
+}
+.select-area .center {
+    display: block;
+    color: #333;
+    white-space: nowrap;
+    padding: 12px 10px;
+    margin: 0 30px 0 0;
+    overflow: hidden;
+    font: 13px/16px 'latolight',  Arial,  Helvetica,  sans-serif;
+}
+.select-disabled {
+    background: #eee;
+}
+.select-area .select-opener {
+    background: #48c7f1;
+    position: absolute;
+    width: 30px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 16px 0 0;
+}
+.select-area .select-opener:after {
+    width: 13px;
+    height: 8px;
+    content: '';
+    margin: 0 auto;
+    display: block;
+    background: url(../signup/sprite-icons.png) no-repeat -65px -52px;
+}
+.select-options {
+    position: absolute;
+    overflow: hidden;
+    background: #fff;
+    z-index: 2000;
+    margin: 0 0 0 1px;
+}
+.select-options .drop-holder {
+    border-top: 1px solid #777;
+    overflow: hidden;
+    height: 1%}
+.select-options ul {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+.select-options ul li {
+    width: 100%;
+    float: left;
+    font: 14px/17px 'latolight',  Arial,  Helvetica,  sans-serif;
+}
+.select-options ul li:first-child {
+    display: none;
+}
+.select-options ul a {
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+    cursor: default;
+    color: #000;
+    height: 1%}
+.select-options .item-selected a {
+    text-decoration: none;
+    background: #48c7f1;
+    color: #fff;
+}
+.select-options .optgroup {
+    clear: both;
+}
+.select-options .optgroup strong {
+    display: block;
+    padding: 5px;
+}
+.select-options .optgroup ul a {
+    padding-left: 30px;
+}
+#main:after {
+    clear: both;
+    content: '';
+    display: block;
+}
+@media screen and (max-width: 1279px) {
+    body {
+    min-width: 320px;
+}
+#header .main-img {
+    left: 50%;
+    width: inherit;
+    position: relative;
+    margin: 0 0 0 -640px;
+}
+}@media screen and (max-width: 990px) {
+    .form-holder {
+    width: auto;
+}
+}@media screen and (max-width: 767px) {
+    #header {
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+}
+#header .header-info {
+    padding: 0 0 10px;
+}
+.social-networks .title {
+    float: none;
+    margin: 0 0 5px;
+    display: block;
+}
+#header .social-networks {
+    width: auto;
+    margin: 37px 0 0;
+}
+#header .logo {
+    width: 140px;
+    height: 135px;
+    background: url("../signup/logo-small.png") no-repeat;
+}
+#header h1 {
+    font-size: 24px;
+    line-height: 27px;
+}
+#header p {
+    margin: 0 0 10px;
+}
+.btn.btn-demo {
+    min-width: inherit;
+}
+.articles-holder .article {
+    min-height: inherit;
+    clear: both;
+    height: auto !important;
+    background: url("../signup/border2.png") no-repeat 50% 0;
+}
+.articles-holder .article:first-child {
+    background: none;
+}
+.articles-holder .article:first-child .box {
+    padding: 0 0 20px;
+}
+.articles-holder .article .box {
+    padding: 20px 0;
+}
+.articles-holder .article h2 {
+    margin: 0 0 10px;
+}
+.form-signup .col, .form-signup .col:first-child {
+    float: none;
+    width: inherit;
+    padding: 12px 0 0;
+    overflow: hidden;
+}
+.form-signup .col:first-child {
+    padding: 0;
+}
+.modal.add .close {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+}
+.select-options {
+    margin: 0;
+}
+#header h1 span {
+    display: block;
+}
+}@media screen and (max-width: 580px) {
+    #footer .info li {
+    padding: 0;
+    display: inherit;
+    background: none;
+}
+.social-networks ul {
+    vertical-align: top;
+    display: inline-block;
+}
+}
