@@ -28,7 +28,8 @@ petsPag = new List('pets', options2);
        && (selectedButtonValues["species"] == undefined || item._values.species == selectedButtonValues["species"] || selectedButtonValues["species"].indexOf("Any") > -1 );
      return remainingPets;
   })
-  console.log($('.pet-box').length)
+  totalRemainingPets = $('.pet-box').length
+  $("#total-pets-found").html("Total " + totalRemainingPets + " Found")
 })`
 
 `function filterBySize() {
