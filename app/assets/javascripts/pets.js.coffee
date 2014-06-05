@@ -18,22 +18,35 @@ pets = new List( 'pets', options );
      var size = item._values.size;
      var age = item._values.age;
      var species = item._values.species;
-     return size == selectedButtonValues["size"] && age == selectedButtonValues["age"]
-       && species == selectedButtonValues["species"];
+     return (selectedButtonValues["size"] == undefined || size == selectedButtonValues["size"] || selectedButtonValues["size"].indexOf("ANY") > -1 )
+       && (selectedButtonValues["age"] == undefined || age == selectedButtonValues["age"] || selectedButtonValues["age"].indexOf("Any") > -1 )
+       && (selectedButtonValues["species"] == undefined || species == selectedButtonValues["species"] || selectedButtonValues["species"].indexOf("Any") > -1 );
   })
 })`
 
 `function filterBySize() {
   radioButtonValue = $('input[name="size"]:checked').attr('value')
-  return radioButtonValue.toUpperCase()
+  if (radioButtonValue == undefined) {
+    return undefined
+  } else {
+    return radioButtonValue.toUpperCase()
+  }
 }`
 
 `function filterByAge() {
   radioButtonValue = $('input[name="age"]:checked').attr('value')
-  return radioButtonValue.charAt(0).toUpperCase() + radioButtonValue.slice(1)
+  if (radioButtonValue == undefined) {
+    return undefined
+  } else {
+    return radioButtonValue.charAt(0).toUpperCase() + radioButtonValue.slice(1)
+  }
 }`
 
 `function filterBySpecies() {
   radioButtonValue = $('input[name="species"]:checked').attr('value')
-  return radioButtonValue.charAt(0).toUpperCase() + radioButtonValue.slice(1)
+  if (radioButtonValue == undefined) {
+    return undefined
+  } else {
+    return radioButtonValue.charAt(0).toUpperCase() + radioButtonValue.slice(1)
+  }
 }`
