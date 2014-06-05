@@ -4,7 +4,6 @@
 </header>
 
 <div class="paginator">
-	<%= will_paginate @posts %>
 </div>
 
 <div id="pets">
@@ -15,9 +14,9 @@
   <form id="filter">
   	<p>
   		Size:
-			<input type="radio" name="size" value="small">Small
-			<input type="radio" name="size" value="medium">Medium
-			<input type="radio" name="size" value="large">Large
+			<input type="radio" name="size" value="s">Small
+			<input type="radio" name="size" value="m">Medium
+			<input type="radio" name="size" value="l">Large
 			<input type="radio" name="size" value="any-size">Any Size
 		</p>
   	<p>
@@ -62,9 +61,26 @@
 
 <script type="text/javascript">
 	var options = {
-		valueNames: [ 'name', 'breed', 'age', 'gender', 'location' ]
+		valueNames: [ 'name', 'breed', 'age', 'gender', 'size', 'location', 'species' ]
 	};
 
 	var pets = new List( 'pets', options );
+
+	$( "input[name='size']" ).click(function() {
+		var size = this.value.toUpperCase()
+    // var color=$('#colour').val(), itemVal=$('#items').val();
+	  pets.filter(function (item) {
+        if (item._values.size.charAt(0).toUpperCase() == size ) {
+            return true;
+        } else if ( size.indexOf("ANY") > -1 ) {
+            return true;
+        } else {
+        		a = item._values.size
+        		console.log( size )
+            return false;
+        }
+    });
+
+  });
 
 </script>
