@@ -33,10 +33,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Integrates pagination with Rails, compatible with Mongoid
-group :pagination do
-  gem 'kaminari'
-end
+# Integrates Bootstrap pagination component with Rails
+  gem 'will_paginate-bootstrap'
+  gem "will_paginate_mongoid"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
