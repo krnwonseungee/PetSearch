@@ -3,24 +3,19 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 options = {
-  valueNames: [ 'name', 'breed', 'age', 'gender', 'size', 'location', 'species' ]
+  valueNames: [ 'name', 'breed', 'age', 'gender', 'size', 'location', 'species' ],
 };
 
 pets = new List( 'pets', options );
 
 `$( "input" ).click(function(){
-   var selectedButtonValues = {};
-   selectedButtonValues["size"] = filterBySize();
-   selectedButtonValues["age"] = filterByAge();
-   selectedButtonValues["species"] = filterBySpecies();
+   var selectedButtonValues = {size: filterBySize(), age: filterByAge(), species: filterBySpecies()};
    console.log(selectedButtonValues)
    pets.filter(function(item) {
-     var size = item._values.size;
-     var age = item._values.age;
-     var species = item._values.species;
-     return (selectedButtonValues["size"] == undefined || size == selectedButtonValues["size"] || selectedButtonValues["size"].indexOf("ANY") > -1 )
-       && (selectedButtonValues["age"] == undefined || age == selectedButtonValues["age"] || selectedButtonValues["age"].indexOf("Any") > -1 )
-       && (selectedButtonValues["species"] == undefined || species == selectedButtonValues["species"] || selectedButtonValues["species"].indexOf("Any") > -1 );
+    remainingPets = (selectedButtonValues["size"] == undefined || item._values.size == selectedButtonValues["size"] || selectedButtonValues["size"].indexOf("ANY") > -1 )
+       && (selectedButtonValues["age"] == undefined || item._values.age == selectedButtonValues["age"] || selectedButtonValues["age"].indexOf("Any") > -1 )
+       && (selectedButtonValues["species"] == undefined || item._values.species == selectedButtonValues["species"] || selectedButtonValues["species"].indexOf("Any") > -1 );
+     return remainingPets;
   })
 })`
 
