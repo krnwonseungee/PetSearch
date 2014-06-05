@@ -10,14 +10,18 @@
 <div id="pets-list">
 	<% @pets.each do |pet| %>
 		<ul class="list">
-			<li><img src="httli://placehold.it/200X250"></li>
+			<li><img src="http://placehold.it/200X250"></li>
 			<li>
-				<h3><%= pet.name %><%= link_to 'profile', pet, { class: 'btn', id: 'prof-link' } %></h3>
+				<h3 class="name"><%= pet.name %></h3>
+					<%= link_to 'profile', pet, { class: 'btn', id: 'prof-link' } %>
 			</li>
-			<li><%= pet.primary_breed %> - <%= pet.secondary_breed %></li>
-			<li><%= pet.age %></li>
-			<li><%= pet.gender %></li>
-			<li><%= pet.contact_city %>, <%= pet.contact_state %> </li>
+			<li><p class="primary-breed"><%= pet.primary_breed %> - <%= pet.secondary_breed %></p></li>
+			<li><p class="age"><%= pet.age %></p></li>
+			<li><p class="gender"><%= pet.gender %></p></li>
+			<li>
+				<p class="location"><%= pet.contact_city %>,
+				<%= pet.contact_state %></p>
+			</li>
 		</ul>
 	<% end %>
 </div>
