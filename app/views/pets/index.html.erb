@@ -7,25 +7,42 @@
 	<%= will_paginate @posts %>
 </div>
 
-<div id="pets-list">
-	<% @pets.each do |pet| %>
-		<ul class="list">
-			<li><img src="http://placehold.it/200X250"></li>
-			<li>
-				<h3 class="name"><%= pet.name %></h3>
-					<%= link_to 'profile', pet, { class: 'btn', id: 'prof-link' } %>
-			</li>
-			<li><p class="primary-breed"><%= pet.primary_breed %> - <%= pet.secondary_breed %></p></li>
-			<li><p class="age"><%= pet.age %></p></li>
-			<li><p class="gender"><%= pet.gender %></p></li>
-			<li>
-				<p class="location"><%= pet.contact_city %>,
-				<%= pet.contact_state %></p>
-			</li>
-		</ul>
-	<% end %>
+<div id="pets">
+
+  <input class="search" placeholder="Search" />
+  <button class="sort" data-sort="name">
+    Sort by name
+  </button>
+
+	<ul class="list">
+		<% @pets.each do |pet| %>
+			<div class="pet-box">
+				<li><img src="http://placehold.it/200X250"></li>
+				<li>
+					<h3 class="name"><%= pet.name %></h3>
+						<%= link_to 'profile', pet, { class: 'btn', id: 'prof-link' } %>
+				</li>
+				<li><p class="breed"><%= pet.primary_breed %> - <%= pet.secondary_breed %></p></li>
+				<li><p class="age"><%= pet.age %></p></li>
+				<li><p class="gender"><%= pet.gender %></p></li>
+				<li>
+					<p class="location"><%= pet.contact_city %>,
+					<%= pet.contact_state %></p>
+				</li>
+			</div>
+		<% end %>
+	</ul>
 </div>
 
 <br>
 
 <%= link_to 'New Pet', new_pet_path %>
+
+<script type="text/javascript">
+	var options = {
+		valueNames: [ 'name', 'breed', 'age', 'gender', 'location' ]
+	};
+
+	var pets = new List( 'pets', options );
+
+</script>
