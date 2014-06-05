@@ -1,15 +1,15 @@
 GIT
   remote: git://github.com/alexreisner/geocoder.git
-  revision: 24184142586d94dd62a79972e11bf0fa347e27fa
+  revision: 2e98af6cd3b14af4b3e95bc22de1c82f762cb61b
   specs:
     geocoder (1.2.1)
 
 GIT
   remote: git://github.com/mongoid/mongoid.git
-  revision: 5235c02dc7c53c706078a199c370d8f22b156dc3
+  revision: 1e504507fa1729d3b31eb13521c8606248921725
   specs:
-    mongoid (4.0.0.beta2)
-      activemodel (~> 4.0.0)
+    mongoid (4.0.0.rc1)
+      activemodel (~> 4.0)
       moped (~> 2.0.0.rc1)
       origin (~> 2.1)
       tzinfo (>= 0.3.37)
@@ -42,7 +42,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.2)
-    bson (2.2.4)
+    bson (2.3.0)
     builder (3.1.4)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -125,6 +125,12 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    will_paginate (3.0.5)
+    will_paginate-bootstrap (1.0.0)
+      will_paginate (>= 3.0.3)
+    will_paginate_mongoid (2.0.1)
+      mongoid
+      will_paginate (~> 3.0)
 
 PLATFORMS
   ruby
@@ -140,3 +146,5 @@ DEPENDENCIES
   sdoc
   turbolinks
   uglifier (>= 1.3.0)
+  will_paginate-bootstrap
+  will_paginate_mongoid
