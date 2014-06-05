@@ -3,8 +3,6 @@
 	total <%= @pets.size %> pets found
 </header>
 
-<div class="paginator">
-</div>
 
 <div id="pets">
 
@@ -35,6 +33,8 @@
 	</form>
 
 	<ul class="list">
+	<ul class="pagination"></ul>
+
 		<% @pets.each do |pet| %>
 			<div class="pet-box">
 				<li><img src="http://placehold.it/200X250"></li>
