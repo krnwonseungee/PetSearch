@@ -75,21 +75,21 @@
 		})
 	})
 
-	$( "input[name='size']" ).click(function() {
-		var size = this.value.toUpperCase()
-    // var color=$('#colour').val(), itemVal=$('#items').val();
-	  pets.filter(function (item) {
-        if (item._values.size.charAt(0).toUpperCase() == size ) {
-            return true;
-        } else if ( size.indexOf("ANY") > -1 ) {
-            return true;
-        } else {
-        		a = item._values.size
-        		console.log( size )
-            return false;
-        }
-    });
-
+	function filterBySize() {
+		$( "input[name='size']" ).click(function() {
+			var size = this.value.toUpperCase()
+	    // var color=$('#colour').val(), itemVal=$('#items').val();
+		  pets.filter(function (item) {
+	      if (item._values.size.charAt(0).toUpperCase() == size ) {
+	          return true;
+	      } else if ( size.indexOf("ANY") > -1 ) {
+	          return true;
+	      } else {
+	      		a = item._values.size
+	      		console.log( size )
+	          return false;
+	      }
+	    });
   });
 
 // $.each( checked, function(i, l){
