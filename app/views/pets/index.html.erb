@@ -10,9 +10,30 @@
 <div id="pets">
 
   <input class="search" placeholder="Search" />
-  <button class="sort" data-sort="name">
-    Sort by name
-  </button>
+  <button class="sort" data-sort="name">Sort by name</button>
+
+  <form id="filter">
+  	<p>
+  		Size:
+			<input type="radio" name="size" value="small">Small
+			<input type="radio" name="size" value="medium">Medium
+			<input type="radio" name="size" value="large">Large
+			<input type="radio" name="size" value="any-size">Any Size
+		</p>
+  	<p>
+  		Age:
+			<input type="radio" name="age" value="young">Young
+			<input type="radio" name="age" value="adult">Adult
+			<input type="radio" name="age" value="senior">Senior
+			<input type="radio" name="age" value="any-age">Any Age
+		</p>
+  	<p>
+  		Species:
+			<input type="radio" name="species" value="cat">Cat
+			<input type="radio" name="species" value="dog">Dog
+			<input type="radio" name="species" value="any-species">Any species
+		</p>
+	</form>
 
 	<ul class="list">
 		<% @pets.each do |pet| %>
@@ -25,6 +46,7 @@
 				<li><p class="breed"><%= pet.primary_breed %> - <%= pet.secondary_breed %></p></li>
 				<li><p class="age"><%= pet.age %></p></li>
 				<li><p class="gender"><%= pet.gender %></p></li>
+				<li><p class="size"><%= pet.size %></p></li>
 				<li>
 					<p class="location"><%= pet.contact_city %>,
 					<%= pet.contact_state %></p>
