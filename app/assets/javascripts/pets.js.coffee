@@ -8,9 +8,20 @@ options = {
 
 pets = new List( 'pets', options );
 
+options2 = {
+    valueNames: [ 'name', 'breed', 'age', 'gender', 'size', 'location', 'species' ],
+    page: 30,
+    plugins: [
+      ListPagination({})
+    ]
+  };
+
+petsPag = new List('pets', options2);
+
 `$( "input" ).click(function(){
    var selectedButtonValues = {size: filterBySize(), age: filterByAge(), species: filterBySpecies()};
    console.log(selectedButtonValues)
+
    pets.filter(function(item) {
     remainingPets = (selectedButtonValues["size"] == undefined || item._values.size == selectedButtonValues["size"] || selectedButtonValues["size"].indexOf("ANY") > -1 )
        && (selectedButtonValues["age"] == undefined || item._values.age == selectedButtonValues["age"] || selectedButtonValues["age"].indexOf("Any") > -1 )
