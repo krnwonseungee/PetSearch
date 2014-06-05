@@ -5,6 +5,14 @@
 .list {
   display: inline-block;
   padding: 0px 30px 20px 30px;
+
+  li {
+  list-style: none
+  }
+
+  a {
+    margin-top: -15px
+  }
 }
 
 #prof-link {
