@@ -7,16 +7,18 @@
 	<%= will_paginate @posts %>
 </div>
 
-<div class="pets-list">
+<div id="pets-list">
 	<% @pets.each do |pet| %>
-		<div id="animal-box">
-			<p><img src="http://placehold.it/200X250"></p>
-			<h3><%= pet.name %><%= link_to 'profile', pet, { class: 'btn', id: 'prof-link' } %></h3>
-			<p><%= pet.primary_breed %> - <%= pet.secondary_breed %></p>
-			<p><%= pet.age %></p>
-			<p><%= pet.gender %> </p>
-			<p><%= pet.contact_city %>, <%= pet.contact_state %> </p>
-		</div>
+		<ul class="list">
+			<li><img src="httli://placehold.it/200X250"></li>
+			<li>
+				<h3><%= pet.name %><%= link_to 'profile', pet, { class: 'btn', id: 'prof-link' } %></h3>
+			</li>
+			<li><%= pet.primary_breed %> - <%= pet.secondary_breed %></li>
+			<li><%= pet.age %></li>
+			<li><%= pet.gender %></li>
+			<li><%= pet.contact_city %>, <%= pet.contact_state %> </li>
+		</ul>
 	<% end %>
 </div>
 
