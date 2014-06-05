@@ -66,6 +66,15 @@
 
 	var pets = new List( 'pets', options );
 
+	$( "input" ).click(function(){
+		var buttonValues = [];
+		$.each( $(":radio:checked"), function(i, l){
+		  buttonValues.push(l.value);
+		});
+		pets.filter(function(item) {
+		})
+	})
+
 	$( "input[name='size']" ).click(function() {
 		var size = this.value.toUpperCase()
     // var color=$('#colour').val(), itemVal=$('#items').val();
@@ -83,4 +92,7 @@
 
   });
 
+// $.each( checked, function(i, l){
+//   array.push(checked[i].value)
+// } )
 </script>
