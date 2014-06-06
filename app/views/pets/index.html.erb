@@ -4,7 +4,7 @@
 </header>
 
 <div id="content">
-	<div id="total-pets-found"><strong>Total <%= @pets.size %> pets Found</strong></div>
+	<div id="total-pets-found"><b>Total <%= @pets.size %> pets Found</b></div>
 
 	<div id="pets">
 		<div id="search-bar">
@@ -13,21 +13,22 @@
 		</div>
 
 	  <form id="filters">
-	  		<p>Size:</p>
+	  		<p><strong>Filters:</strong></p>
+	  		<p>Size</p>
 				<p><input type="radio" name="size" value="s">Small</p>
 				<p><input type="radio" name="size" value="m">Medium</p>
 				<p><input type="radio" name="size" value="l">Large</p>
 				<p><input type="radio" name="size" value="any-size">Any Size</p>
 
 
-	  		<p>Age:</p>
+	  		<p>Age</p>
 				<p><input type="radio" name="age" value="young">Young</p>
 				<p><input type="radio" name="age" value="adult">Adult</p>
 				<p><input type="radio" name="age" value="senior">Senior</p>
 				<p><input type="radio" name="age" value="any-age">Any Age</p>
 
 
-	  		<p>Species:</p>
+	  		<p>Species</p>
 				<p><input type="radio" name="species" value="cat">Cat</p>
 				<p><input type="radio" name="species" value="dog">Dog</p>
 				<p><input type="radio" name="species" value="any-species">Any species</p>
@@ -36,7 +37,7 @@
 		<ul class="list">
 			<% @pets.each do |pet| %>
 				<div class="pet-box">
-					<li><img src="http://placehold.it/200X250"></li>
+					<%= link_to( image_tag("http://placehold.it/200X250"), pet_path(pet) ) %>
 					<li>
 						<h3 class="name"><%= pet.name %></h3>
 							<%= link_to 'profile', pet, { class: 'btn', id: 'prof-link' } %>
