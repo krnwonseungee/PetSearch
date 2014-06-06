@@ -4,18 +4,18 @@
   <title>PetSearch</title>
   <script src="http://listjs.com/no-cdn/list.pagination.js"></script>
   <%= stylesheet_link_tag    "//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", media: "all", "data-turbolinks-track" => true %>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= stylesheet_link_tag    "bootstrap", media: "all", "data-turbolinks-track" => true %>
   <%= stylesheet_link_tag    "bootstrap-theme.min", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= stylesheet_link_tag    "all", media: "all", "data-turbolinks-track" => true %>
   <%= stylesheet_link_tag    "scaffolds", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "pets", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <%= yield %>
-
 <%= javascript_include_tag "pets", "data-turbolinks-track" => true %>
 </body>
 </html>
