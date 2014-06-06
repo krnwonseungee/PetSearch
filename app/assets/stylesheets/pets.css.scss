@@ -74,24 +74,36 @@ header {
 }
 
 .general-info-box {
-  margin: -170px 370px;
-  width: 500px;
+  margin: -180px 370px;
+  width: 800px;
   height: 250px;
 
-  .column {
+  .location-gender {
     float: left;
-    margin-left: 60px;
+    margin: 0px 20px 0px 60px;
+    position: relative
+
   }
 
-  .column-org-info {
-    float: right;
+  .contact-org-info {
+    float: center;
+    position: relative;
+  }
+
+  .other-contact-info {
+    position: relative;
+    margin: -74px 0px 0px 400px
   }
 
 }
 
 .description-box {
-  width: 500px;
-  margin: 90px 0px 0px 300px;
+  width: 600px;
+  margin: 150px 0px 0px 170px;
+
+  h3 {
+    padding-left: 10px
+  }
 }
 
 #filters {
