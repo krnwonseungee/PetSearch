@@ -62,13 +62,21 @@ header {
   height: 250px;
 
   .column {
-    float: left
+    float: left;
   }
 
   .column-org-info {
-    float: right
+    float: right;
   }
 
 }
 
+#filters {
+  float: left;
+}
+
+#search-bar {
+  float: right;
+  margin-top: 5px
+}
 
