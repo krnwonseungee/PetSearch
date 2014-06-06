@@ -23,6 +23,13 @@ header {
 }
 
 #total-pets-found {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.fa-circle::before {
+  font-size: 3px;
+  color: gray
 }
 
 #content {
@@ -49,7 +56,9 @@ header {
     #prof-link {
       float: right;
       margin-right: 5px;
-      padding: 7px 6px
+      padding: 7px 6px;
+      background-color: #3E98D8
+
     }
   }
 }
@@ -83,6 +92,7 @@ header {
   float: left;
   border: 1px solid #E0DBD2;
   width: 200px;
+  height: 470px;
   background-color: #FCFBF9;
 
   h5, p {
