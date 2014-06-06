@@ -4,7 +4,7 @@ class Pet
 	include Geocoder::Model::Mongoid
 
   field :name, :default => " "
-  field :age 
+  field :age
   field :gender
   field :size
   field :description
@@ -16,8 +16,8 @@ class Pet
   field :is_hypoallergenic, type: Boolean
   field :tail
   field :color
-  field :primary_breed  
-  field :secondary_breed  
+  field :primary_breed
+  field :secondary_breed
   field :hair_length
   field :contact_street_address
   field :contact_city
@@ -26,8 +26,22 @@ class Pet
   field :contact_phone
   field :contact_fax
   field :contact_email
-  field :address 
+  field :address
   field :coordinates, :type => Array
   geocoded_by :address
   after_validation :geocode
+
+  def get_gender
+    gender == "F" ? "Female ♀" : "Male ♂"
+  end
+
+  def get_size
+    if size == "S"
+      "Small"
+    elsif pet.size == "M"
+      "Medium"
+    else
+      "Large"
+    end
+  end
 end

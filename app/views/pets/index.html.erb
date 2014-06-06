@@ -1,60 +1,72 @@
 <header>
-	<h1>Pets</h1>
-	<span id="total-pets-found">total <%= @pets.size %> pets found</span>
+	<img src="http://petstablished.com/assets/signup/img.jpg" id="banner">
+	<img src="https://scontent-a-sjc.xx.fbcdn.net/hphotos-xfa1/t1.0-9/10365895_287706524736510_8131337992889599730_n.jpg" id="logo">
 </header>
 
+<div id="content">
+	<div id="total-pets-found"><b>Total <%= @pets.size %> pets Found</b></div>
 
-<div id="pets">
+	<div id="pets">
+		<div id="search-bar">
+		  <input class="search" placeholder="Search" />
+		  <button class="sort" data-sort="name">Search by Keyword</button>
+		</div>
 
-  <input class="search" placeholder="Search" />
-  <button class="sort" data-sort="name">Sort by name</button>
+	  <form id="filters">
+	  		<h5><b>Filters:</b></h5>
+	  		<p><b>Size</b></p>
+				<p><input type="radio" name="size" value="s"> Small</p>
+				<p><input type="radio" name="size" value="m"> Medium</p>
+				<p><input type="radio" name="size" value="l"> Large</p>
+				<p><input type="radio" name="size" value="any-size"> Any Size</p>
 
-  <form id="filter">
-  	<p>
-  		Size:
-			<input type="radio" name="size" value="s">Small
-			<input type="radio" name="size" value="m">Medium
-			<input type="radio" name="size" value="l">Large
-			<input type="radio" name="size" value="any-size">Any Size
-		</p>
-  	<p>
-  		Age:
-			<input type="radio" name="age" value="young">Young
-			<input type="radio" name="age" value="adult">Adult
-			<input type="radio" name="age" value="senior">Senior
-			<input type="radio" name="age" value="any-age">Any Age
-		</p>
-  	<p>
-  		Species:
-			<input type="radio" name="species" value="cat">Cat
-			<input type="radio" name="species" value="dog">Dog
-			<input type="radio" name="species" value="any-species">Any species
-		</p>
-	</form>
 
-	<ul class="pagination"></ul>
-	<ul class="list">
-		<% @pets.each do |pet| %>
-			<div class="pet-box">
-				<li><img src="http://placehold.it/200X250"></li>
-				<li>
-					<h3 class="name"><%= pet.name %></h3>
-						<%= link_to 'profile', pet, { class: 'btn', id: 'prof-link' } %>
-				</li>
-				<li><p class="breed"><%= pet.primary_breed %> - <%= pet.secondary_breed %></p></li>
-				<li><p class="age"><%= pet.age %></p></li>
-				<li><p class="gender"><%= pet.gender %></p></li>
-				<li><p class="size"><%= pet.size %></p></li>
-				<li><p class="species"><%= pet.species %></p></li>
-				<li>
-					<p class="location"><%= pet.contact_city %>,
-					<%= pet.contact_state %></p>
-				</li>
-			</div>
-		<% end %>
-	</ul>
-</div>
+	  		<p><b>Age</b></p>
+				<p><input type="radio" name="age" value="young"> Young</p>
+				<p><input type="radio" name="age" value="adult"> Adult</p>
+				<p><input type="radio" name="age" value="senior"> Senior</p>
+				<p><input type="radio" name="age" value="any-age"> Any Age</p>
+
+
+	  		<p><b>Species</b></p>
+				<p><input type="radio" name="species" value="cat"> Cat</p>
+				<p><input type="radio" name="species" value="dog"> Dog</p>
+				<p><input type="radio" name="species" value="any-species"> Any species</p>
+		</form>
+
+		<ul class="list">
+			<% @pets.each do |pet| %>
+				<div class="pet-box">
+					<%= link_to( image_tag("http://placehold.it/200X250"), pet_path(pet) ) %>
+					<li>
+						<h4 class="name"><%= pet.name %></h4>
+							<%= link_to "View Profile", pet_path(pet), { class: 'btn', id: 'prof-link' } %>
+					</li>
+					<li>
+						<p class="breed">
+							<%= pet.primary_breed %>
+							<%= "&" if pet.secondary_breed != nil %>
+						<%= pet.secondary_breed %></p></li>
+					<li>
+						<p>
+							<span class="age"><%= pet.age %></span> ·
+							<span class="gender"><%= pet.get_gender %></span>
+						</p>
+					<li><p class="size"><%= pet.get_size %></p></li>
+					</li>
+					<li>
+						<p class="location"><i class="fa fa-map-marker"></i> <%= pet.contact_city %>,
+						<%= pet.contact_state %></p>
+					</li>
+				</div>
+			<% end %>
+		</ul>
+
+		<ul class="pagination"></ul>
+	</div>
 
 <br>
 
 <%= link_to 'New Pet', new_pet_path %>
+
+</div>
