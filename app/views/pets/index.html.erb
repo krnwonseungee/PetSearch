@@ -1,10 +1,8 @@
 <header>
 	<h1>Pets</h1>
-	total <%= @pets.size %> pets found
+	<span id="total-pets-found">total <%= @pets.size %> pets found</span>
 </header>
 
-<div class="paginator">
-</div>
 
 <div id="pets">
 
@@ -34,6 +32,7 @@
 		</p>
 	</form>
 
+	<ul class="pagination"></ul>
 	<ul class="list">
 		<% @pets.each do |pet| %>
 			<div class="pet-box">
