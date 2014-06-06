@@ -10,7 +10,7 @@ pets = new List( 'pets', options );
 
 options2 = {
     valueNames: [ 'name', 'breed', 'age', 'gender', 'size', 'location', 'species' ],
-    page: 20,
+    page: 15,
     plugins: [
       ListPagination({})
     ]
