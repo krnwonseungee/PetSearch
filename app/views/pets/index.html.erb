@@ -39,16 +39,20 @@
 				<div class="pet-box">
 					<%= link_to( image_tag("http://placehold.it/200X250"), pet_path(pet) ) %>
 					<li>
-						<h3 class="name"><%= pet.name %></h3>
-							<%= link_to 'profile', pet, { class: 'btn', id: 'prof-link' } %>
+						<h4 class="name"><%= pet.name %></h4>
+							<%= link_to "View Profile", pet_path(pet), { class: 'btn', id: 'prof-link' } %>
 					</li>
 					<li><p class="breed"><%= pet.primary_breed %> - <%= pet.secondary_breed %></p></li>
-					<li><p class="age"><%= pet.age %></p></li>
-					<li><p class="gender"><%= pet.gender %></p></li>
-					<li><p class="size"><%= pet.size %></p></li>
-					<li><p class="species"><%= pet.species %></p></li>
 					<li>
-						<p class="location"><%= pet.contact_city %>,
+						<p>
+							<span class="age"><%= pet.age %></span>
+							<i class="fa fa-circle"></i>
+							<span class="gender"><%= pet.get_gender %></span>
+						</p>
+					</li>
+					<li><p class="size"><%= pet.get_size %></p></li>
+					<li>
+						<p class="location"><i class="fa fa-map-marker"></i> <%= pet.contact_city %>,
 						<%= pet.contact_state %></p>
 					</li>
 				</div>
