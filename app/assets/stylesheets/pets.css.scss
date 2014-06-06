@@ -74,12 +74,13 @@ header {
 }
 
 .general-info-box {
-
+  margin: -170px 250px;
   width: 500px;
   height: 250px;
 
   .column {
     float: left;
+    margin-left: 60px;
   }
 
   .column-org-info {
@@ -104,4 +105,15 @@ header {
   float: right;
   margin: -50px 5px 0px 0px
 }
+
+#pet-name p {
+  font-size: 56px;
+  margin: 50px 0px 0px 170px
+}
+
+#profile-pic {
+  margin: -20px 0px 0px 40px;
+}
+
+
 
