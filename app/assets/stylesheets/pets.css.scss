@@ -113,11 +113,29 @@ header {
 
 #pet-name p {
   font-size: 56px;
-  margin: 50px 0px 0px 170px
+  margin: 50px 0px 0px 300px
 }
 
 #profile-pic {
+  width: 300px;
+  height: 250px;
   margin: -20px 0px 0px 40px;
+}
+
+body .table-striped {
+  width: 260px;
+
+  tr .key-val-row {
+    height: 10px
+  }
+
+  .key {
+    padding-left: 5px;
+  }
+
+  .value {
+    padding-left: 5px;
+  }
 }
 
 
