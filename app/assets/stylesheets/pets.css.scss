@@ -74,18 +74,42 @@ header {
 }
 
 .general-info-box {
+  margin: -180px 370px;
+  width: 650px;
+  height: 130px;
+  border: 1px solid;
+  border-color: #C9C2B7;
+  padding-top: 10px;
+  background-color: #FCFBF9;
+  color: #8C8181;
 
-  width: 500px;
-  height: 250px;
-
-  .column {
+  .location-gender {
     float: left;
+    margin: 0px 20px 0px 60px;
+    position: relative
+
   }
 
-  .column-org-info {
-    float: right;
+  .contact-org-info {
+    float: center;
+    position: relative;
   }
 
+  .other-contact-info {
+    position: relative;
+    margin: -74px 0px 0px 400px
+  }
+
+}
+
+body .description-box {
+  width: 600px;
+  position: relative;
+  margin: 270px 0px 0px 125px;
+
+  h2 {
+    padding-left: 10px;
+  }
 }
 
 #filters {
@@ -102,6 +126,44 @@ header {
 
 #search-bar {
   float: right;
-  margin: -50px 5px 0px 0px
+  margin: -50px 5px 0px 0px;
 }
+
+#pet-name p {
+  font-size: 56px;
+  margin: 50px 0px 0px 300px;
+}
+
+#profile-pic {
+  width: 300px;
+  height: 250px;
+  margin: -20px 0px 0px 40px;
+}
+
+.table-striped {
+  width: 260px;
+  margin: -150px 0px 20px 790px;
+  border: solid #C9C2B7;
+  border-width: 1px;
+
+  .str-table-header {
+    padding-left: 5px;
+    font-size: 17px
+  }
+
+  tr .key-val-row {
+    height: 10px
+  }
+
+  .key {
+    font-weight: bold;
+    padding-left: 5px;
+  }
+
+  .value {
+    padding-left: 5px;
+  }
+}
+
+
 

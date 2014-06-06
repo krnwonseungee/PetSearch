@@ -1,15 +1,16 @@
-<!-- removed <p id="notice"> tag -->
-<header id="pet-name">
-  <h1><%= @pet.name %></h1>
-</header>
+<div id="pet-name">
+  <p><%= @pet.name %></p>
+</div>
 
-<%= link_to 'Back', pets_path, {id: 'back-link'} %>
+<div id="back-link">
+  <%= link_to '<< Back to Search Results', pets_path %>
+</div>
 
-<img src="http://placehold.it/200X250">
+<%= image_tag( "http://placehold.it/200X250" , :id => "profile-pic") %>
 
 
 <div class="general-info-box">
-  <div class="column">
+  <div class="location-gender">
     <strong class="title">
       Location
     </strong>
@@ -25,43 +26,59 @@
     </div>
   </div>
 
-  <div class="column-org-info">
+  <div class="contact-org-info">
     <strong class="title">
       Organization Contact
     </strong>
     <div class="holder">
       <%= @pet.organization_name %><br>
       <%= @pet.contact_street_address %><br>
+      <%= @pet.contact_city %>, <%= @pet.contact_state %>
       <%= @pet.contact_zipcode %><br>
+    </div>
+  </div>
+
+  <div class="other-contact-info">
+    <strong class="title">
+      Phone
+    </strong>
+    <div class="holder">
       <%= @pet.contact_phone %><br>
+    </div>
+    <strong class="title">
+      Fax
+    </strong>
+    <div class="holder">
       <%= @pet.contact_fax %><br>
+    </div>
+    <strong class="title">
+      E-mail
+    </strong>
+    <div class="holder">
       <%= @pet.contact_email %><br>
     </div>
   </div>
 </div>
 
 <div class="description-box">
-  <h3><%= @pet.name %>'s Story</h3>
+  <h2>More About <%= @pet.name %></h2>
   <p><%= @pet.description %></p>
 </div>
 
 <table class="table-striped">
-  <thead>
-    <tr>
-      <th> <%= @pet.primary_breed   %> - <%= @pet.secondary_breed   %></th>
-    </tr>
-  </thead>
+    <th colspan="2" class="str-table-header">At a Glance</th>
   <tbody>
-  <tr><td>Age </td><td> <%= @pet.age  %></td></tr>
-  <tr><td>Size </td><td> <%= @pet.size %></td></tr>
-  <tr><td>Housebroken? </td><td> <%= @pet.is_housebroken %></td></tr>
-  <tr><td>Housetrained? </td><td> <%= @pet.is_housetrained %></td></tr>
-  <tr><td>Hypoallergenic? </td><td> <%= @pet.is_hypoallergenic %></td></tr>
-  <tr><td>Tail </td><td> <%= @pet.tail %></td></tr>
-  <tr><td>Color </td><td> <%= @pet.color %></td></tr>
-  <tr><td>Hair Length </td><td> <%= @pet.hair_length %></td></tr>
-  <tr><td>Contact Phone </td><td> <%= @pet.contact_phone %></td></tr>
-  <tr><td>Address </td><td> <%= @pet.addres %></td></tr>
-  <tr><td>Coordinates </td><td> <%= @pet.coordinates %></td></tr>
-  <tr><td>Species </td><td> <%= @pet.species %></td></tr>
-  <tr><td>Status </td><td> <%= @pet.status %></td></tr>
+  <tr class="key-val-row"><td class="key">Breed </td><td class="value">  <%= @pet.primary_breed %><%= " & " if @pet.secondary_breed != nil %><%= @pet.secondary_breed   %></td></tr>
+  <tr class="key-val-row"><td class="key">Age </td><td class="value"> <%= @pet.age  %></td></tr>
+  <tr class="key-val-row"><td class="key">Size </td><td class="value"> <%= @pet.get_size %></td></tr>
+  <tr class="key-val-row"><td class="key">Housebroken? </td><td class="value"> <%= "Yes" if @pet.is_housebroken %></td></tr>
+  <tr class="key-val-row"><td class="key">Housetrained? </td><td class="value"> <%= "Yes" if @pet.is_housetrained %></td></tr>
+  <tr class="key-val-row"><td class="key">Hypoallergenic? </td><td class="value"> <%= "Yes" if @pet.is_hypoallergenic %></td></tr>
+  <tr class="key-val-row"><td class="key">Tail </td><td class="value"> <%= @pet.tail ||= "--" %></td></tr>
+  <tr class="key-val-row"><td class="key">Color </td><td class="value"> <%= @pet.color %></td></tr>
+  <tr class="key-val-row"><td class="key">Hair Length </td><td class="value"> <%= @pet.hair_length %></td></tr>
+  <tr class="key-val-row"><td class="key">Contact Phone </td><td class="value"> <%= @pet.contact_phone %></td></tr>
+  <tr class="key-val-row"><td class="key">Address </td><td class="value"><%= @pet.address %></td></tr>
+  <tr class="key-val-row"><td class="key">Coordinates </td><td class="value"><%= @pet.coordinates %></td></tr>
+  <tr class="key-val-row"><td class="key">Species </td><td class="value"><%= @pet.species %></td></tr>
+  <tr class="key-val-row"><td class="key">Status </td><td class="value"><%= @pet.status ||= "--" %></td></tr>
