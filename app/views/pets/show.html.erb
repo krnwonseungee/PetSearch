@@ -53,7 +53,7 @@
 </div>
 
 <div class="description-box">
-  <h3><%= @pet.name %>`s Story</h3>
+  <h3>More About <%= @pet.name %></h3>
   <p><%= @pet.description %></p>
 </div>
 
@@ -64,16 +64,16 @@
     </tr>
   </thead>
   <tbody>
-  <tr><td>Age </td><td> <%= @pet.age  %></td></tr>
-  <tr><td>Size </td><td> <%= @pet.size %></td></tr>
-  <tr><td>Housebroken? </td><td> <%= @pet.is_housebroken %></td></tr>
-  <tr><td>Housetrained? </td><td> <%= @pet.is_housetrained %></td></tr>
-  <tr><td>Hypoallergenic? </td><td> <%= @pet.is_hypoallergenic %></td></tr>
-  <tr><td>Tail </td><td> <%= @pet.tail %></td></tr>
-  <tr><td>Color </td><td> <%= @pet.color %></td></tr>
-  <tr><td>Hair Length </td><td> <%= @pet.hair_length %></td></tr>
-  <tr><td>Contact Phone </td><td> <%= @pet.contact_phone %></td></tr>
-  <tr><td>Address </td><td> <%= @pet.address %></td></tr>
-  <tr><td>Coordinates </td><td> <%= @pet.coordinates %></td></tr>
-  <tr><td>Species </td><td> <%= @pet.species %></td></tr>
-  <tr><td>Status </td><td> <%= @pet.status %></td></tr>
+  <tr class="key-val-row"><td class="key">Age </td><td class="value"> <%= @pet.age  %></td></tr>
+  <tr class="key-val-row"><td class="key">Size </td><td class="value"> <%= @pet.size %></td></tr>
+  <tr class="key-val-row"><td class="key">Housebroken? </td><td class="value"> <%= @pet.is_housebroken %></td></tr>
+  <tr class="key-val-row"><td class="key">Housetrained? </td><td class="value"> <%= @pet.is_housetrained %></td></tr>
+  <tr class="key-val-row"><td class="key">Hypoallergenic? </td><td class="value"> <%= @pet.is_hypoallergenic %></td></tr>
+  <tr class="key-val-row"><td class="key">Tail </td><td class="value"> <%= @pet.tail %></td></tr>
+  <tr class="key-val-row"><td class="key">Color </td><td class="value"> <%= @pet.color %></td></tr>
+  <tr class="key-val-row"><td class="key">Hair Length </td><td class="value"> <%= @pet.hair_length %></td></tr>
+  <tr class="key-val-row"><td class="key">Contact Phone </td><td class="value"> <%= @pet.contact_phone %></td></tr>
+  <tr class="key-val-row"><td class="key">Address </td><td class="value"><%= @pet.address %></td></tr>
+  <tr class="key-val-row"><td class="key">Coordinates </td><td class="value"><%= @pet.coordinates %></td></tr>
+  <tr class="key-val-row"><td class="key">Species </td><td class="value"><%= @pet.species %></td></tr>
+  <tr class="key-val-row"><td class="key">Status </td><td class="value"><%= @pet.status ||= "--" %></td></tr>
