@@ -32,7 +32,7 @@ class Pet
   after_validation :geocode
 
   def get_gender
-    gender == "F" ? "Female" : "Male"
+    gender == "F" ? "Female ♀" : "Male ♂"
   end
 
   def get_size
