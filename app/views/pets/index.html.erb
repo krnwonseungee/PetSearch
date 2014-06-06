@@ -15,23 +15,23 @@
 	  <form id="filters">
 	  		<h5><b>Filters:</b></h5>
 	  		<p><b>Size</b></p>
-				<p><input type="radio" name="size" value="s">Small</p>
-				<p><input type="radio" name="size" value="m">Medium</p>
-				<p><input type="radio" name="size" value="l">Large</p>
-				<p><input type="radio" name="size" value="any-size">Any Size</p>
+				<p><input type="radio" name="size" value="s"> Small</p>
+				<p><input type="radio" name="size" value="m"> Medium</p>
+				<p><input type="radio" name="size" value="l"> Large</p>
+				<p><input type="radio" name="size" value="any-size"> Any Size</p>
 
 
 	  		<p><b>Age</b></p>
-				<p><input type="radio" name="age" value="young">Young</p>
-				<p><input type="radio" name="age" value="adult">Adult</p>
-				<p><input type="radio" name="age" value="senior">Senior</p>
-				<p><input type="radio" name="age" value="any-age">Any Age</p>
+				<p><input type="radio" name="age" value="young"> Young</p>
+				<p><input type="radio" name="age" value="adult"> Adult</p>
+				<p><input type="radio" name="age" value="senior"> Senior</p>
+				<p><input type="radio" name="age" value="any-age"> Any Age</p>
 
 
 	  		<p><b>Species</b></p>
-				<p><input type="radio" name="species" value="cat">Cat</p>
-				<p><input type="radio" name="species" value="dog">Dog</p>
-				<p><input type="radio" name="species" value="any-species">Any species</p>
+				<p><input type="radio" name="species" value="cat"> Cat</p>
+				<p><input type="radio" name="species" value="dog"> Dog</p>
+				<p><input type="radio" name="species" value="any-species"> Any species</p>
 		</form>
 
 		<ul class="list">
@@ -42,15 +42,18 @@
 						<h4 class="name"><%= pet.name %></h4>
 							<%= link_to "View Profile", pet_path(pet), { class: 'btn', id: 'prof-link' } %>
 					</li>
-					<li><p class="breed"><%= pet.primary_breed %> - <%= pet.secondary_breed %></p></li>
+					<li>
+						<p class="breed">
+							<%= pet.primary_breed %>
+							<%= "&" if pet.secondary_breed != nil %>
+						<%= pet.secondary_breed %></p></li>
 					<li>
 						<p>
-							<span class="age"><%= pet.age %></span>
-							<i class="fa fa-circle"></i>
+							<span class="age"><%= pet.age %></span> ·
 							<span class="gender"><%= pet.get_gender %></span>
 						</p>
-					</li>
 					<li><p class="size"><%= pet.get_size %></p></li>
+					</li>
 					<li>
 						<p class="location"><i class="fa fa-map-marker"></i> <%= pet.contact_city %>,
 						<%= pet.contact_state %></p>
