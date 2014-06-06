@@ -1,16 +1,3 @@
-<!-- lines 1 - 8 changes background color on load. I found this was the most efficient
- way to use assign background colors for 2 different views.
-
- Wrapping this page around a div did not capture the whole page as with a body tag/complicated styling so it's not ideal, but it got the job done without having to unnecessarily create another layout. If there is a "cleaner" way to achieve this I'm open to suggestions.    -->
-
-<script type="text/javascript">
-  function changeBgColor(){
-    $('body').css("background-color", "white")
-  }
-</script>
-
-<body onload="changeBgColor()">
-
 <div id="pet-name">
   <p><%= @pet.name %></p>
 </div>
@@ -74,14 +61,12 @@
 </div>
 
 <div class="description-box">
-  <h3>More About <%= @pet.name %></h3>
+  <h2>More About <%= @pet.name %></h2>
   <p><%= @pet.description %></p>
 </div>
 
 <table class="table-striped">
-  <thead>
-    <th class="str-table-header">At a Glance</th>
-  </thead>
+    <th colspan="2" class="str-table-header">At a Glance</th>
   <tbody>
   <tr class="key-val-row"><td class="key">Breed </td><td class="value">  <%= @pet.primary_breed %><%= " & " if @pet.secondary_breed != nil %><%= @pet.secondary_breed   %></td></tr>
   <tr class="key-val-row"><td class="key">Age </td><td class="value"> <%= @pet.age  %></td></tr>
