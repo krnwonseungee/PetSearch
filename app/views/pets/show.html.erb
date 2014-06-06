@@ -69,6 +69,7 @@
     <th colspan="2" class="str-table-header">At a Glance</th>
   <tbody>
   <tr class="key-val-row"><td class="key">Breed </td><td class="value">  <%= @pet.primary_breed %><%= " & " if @pet.secondary_breed != nil %><%= @pet.secondary_breed   %></td></tr>
+  <tr class="key-val-row"><td class="key">Species </td><td class="value"><%= @pet.species %></td></tr>
   <tr class="key-val-row"><td class="key">Age </td><td class="value"> <%= @pet.age  %></td></tr>
   <tr class="key-val-row"><td class="key">Size </td><td class="value"> <%= @pet.get_size %></td></tr>
   <tr class="key-val-row"><td class="key">Housebroken? </td><td class="value"> <%= "Yes" if @pet.is_housebroken %></td></tr>
@@ -80,5 +81,4 @@
   <tr class="key-val-row"><td class="key">Contact Phone </td><td class="value"> <%= @pet.contact_phone %></td></tr>
   <tr class="key-val-row"><td class="key">Address </td><td class="value"><%= @pet.address %></td></tr>
   <tr class="key-val-row"><td class="key">Coordinates </td><td class="value"><%= @pet.coordinates %></td></tr>
-  <tr class="key-val-row"><td class="key">Species </td><td class="value"><%= @pet.species %></td></tr>
   <tr class="key-val-row"><td class="key">Status </td><td class="value"><%= @pet.status ||= "--" %></td></tr>
