@@ -15,13 +15,15 @@
   <p><%= @pet.name %></p>
 </div>
 
-<%= link_to 'Back', pets_path, {id: 'back-link'} %>
+<div id="back-link">
+  <%= link_to '<< Back to Search Results', pets_path %>
+</div>
 
 <%= image_tag( "http://placehold.it/200X250" , :id => "profile-pic") %>
 
 
 <div class="general-info-box">
-  <div class="column">
+  <div class="location-gender">
     <strong class="title">
       Location
     </strong>
@@ -37,16 +39,35 @@
     </div>
   </div>
 
-  <div class="column-org-info">
+  <div class="contact-org-info">
     <strong class="title">
       Organization Contact
     </strong>
     <div class="holder">
       <%= @pet.organization_name %><br>
       <%= @pet.contact_street_address %><br>
+      <%= @pet.contact_city %>, <%= @pet.contact_state %>
       <%= @pet.contact_zipcode %><br>
+    </div>
+  </div>
+
+  <div class="other-contact-info">
+    <strong class="title">
+      Phone
+    </strong>
+    <div class="holder">
       <%= @pet.contact_phone %><br>
+    </div>
+    <strong class="title">
+      Fax
+    </strong>
+    <div class="holder">
       <%= @pet.contact_fax %><br>
+    </div>
+    <strong class="title">
+      E-mail
+    </strong>
+    <div class="holder">
       <%= @pet.contact_email %><br>
     </div>
   </div>
@@ -59,17 +80,16 @@
 
 <table class="table-striped">
   <thead>
-    <tr>
-      <th> <%= @pet.primary_breed   %> - <%= @pet.secondary_breed   %></th>
-    </tr>
+    <th class="str-table-header">At a Glance</th>
   </thead>
   <tbody>
+  <tr class="key-val-row"><td class="key">Breed </td><td class="value">  <%= @pet.primary_breed %><%= " & " if @pet.secondary_breed != nil %><%= @pet.secondary_breed   %></td></tr>
   <tr class="key-val-row"><td class="key">Age </td><td class="value"> <%= @pet.age  %></td></tr>
-  <tr class="key-val-row"><td class="key">Size </td><td class="value"> <%= @pet.size %></td></tr>
-  <tr class="key-val-row"><td class="key">Housebroken? </td><td class="value"> <%= @pet.is_housebroken %></td></tr>
-  <tr class="key-val-row"><td class="key">Housetrained? </td><td class="value"> <%= @pet.is_housetrained %></td></tr>
-  <tr class="key-val-row"><td class="key">Hypoallergenic? </td><td class="value"> <%= @pet.is_hypoallergenic %></td></tr>
-  <tr class="key-val-row"><td class="key">Tail </td><td class="value"> <%= @pet.tail %></td></tr>
+  <tr class="key-val-row"><td class="key">Size </td><td class="value"> <%= @pet.get_size %></td></tr>
+  <tr class="key-val-row"><td class="key">Housebroken? </td><td class="value"> <%= "Yes" if @pet.is_housebroken %></td></tr>
+  <tr class="key-val-row"><td class="key">Housetrained? </td><td class="value"> <%= "Yes" if @pet.is_housetrained %></td></tr>
+  <tr class="key-val-row"><td class="key">Hypoallergenic? </td><td class="value"> <%= "Yes" if @pet.is_hypoallergenic %></td></tr>
+  <tr class="key-val-row"><td class="key">Tail </td><td class="value"> <%= @pet.tail ||= "--" %></td></tr>
   <tr class="key-val-row"><td class="key">Color </td><td class="value"> <%= @pet.color %></td></tr>
   <tr class="key-val-row"><td class="key">Hair Length </td><td class="value"> <%= @pet.hair_length %></td></tr>
   <tr class="key-val-row"><td class="key">Contact Phone </td><td class="value"> <%= @pet.contact_phone %></td></tr>
