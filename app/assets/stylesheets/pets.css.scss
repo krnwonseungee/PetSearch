@@ -126,12 +126,12 @@ body .description-box {
 
 #search-bar {
   float: right;
-  margin: -50px 5px 0px 0px
+  margin: -50px 5px 0px 0px;
 }
 
 #pet-name p {
   font-size: 56px;
-  margin: 50px 0px 0px 300px
+  margin: 50px 0px 0px 300px;
 }
 
 #profile-pic {
@@ -140,9 +140,11 @@ body .description-box {
   margin: -20px 0px 0px 40px;
 }
 
-body .table-striped {
+.table-striped {
   width: 260px;
-  margin: -160px 0px 0px 790px;
+  margin: -150px 0px 20px 790px;
+  border: solid #C9C2B7;
+  border-width: 1px;
 
   .str-table-header {
     padding-left: 5px;
