@@ -23,13 +23,13 @@ petsPag = new List('pets', options2);
    console.log(selectedButtonValues)
 
    pets.filter(function(item) {
-    remainingPets = (selectedButtonValues["size"] == undefined || item._values.size == selectedButtonValues["size"] || selectedButtonValues["size"].indexOf("ANY") > -1 )
+    var remainingPets = (selectedButtonValues["size"] == undefined || item._values.size == selectedButtonValues["size"] || selectedButtonValues["size"].indexOf("ANY") > -1 )
        && (selectedButtonValues["age"] == undefined || item._values.age == selectedButtonValues["age"] || selectedButtonValues["age"].indexOf("Any") > -1 )
        && (selectedButtonValues["species"] == undefined || item._values.species == selectedButtonValues["species"] || selectedButtonValues["species"].indexOf("Any") > -1 );
      return remainingPets;
   })
   totalRemainingPets = $('.pet-box').length
-  $("#total-pets-found").html("Total " + totalRemainingPets + " Found")
+  $("#total-pets-found").html("Total " + totalRemainingPets + " Pets Found")
 })`
 
 `function filterBySize() {
