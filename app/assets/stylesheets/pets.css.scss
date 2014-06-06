@@ -48,6 +48,7 @@ header {
     li {
       list-style: none;
       padding-left: 8px;
+      margin-bottom: 0px
     }
 
     a {
@@ -58,7 +59,14 @@ header {
       margin-right: 5px;
       padding: 7px 6px;
       background-color: #3E98D8
+    }
 
+    #age-gender {
+      margin-bottom: 5px
+    }
+
+    .species {
+      display:none;
     }
   }
 }
