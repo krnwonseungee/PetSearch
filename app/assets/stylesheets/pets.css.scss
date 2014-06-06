@@ -102,12 +102,13 @@ header {
 
 }
 
-.description-box {
+body .description-box {
   width: 600px;
-  margin: 150px 0px 0px 170px;
+  position: relative;
+  margin: 270px 0px 0px 125px;
 
-  h3 {
-    padding-left: 10px
+  h2 {
+    padding-left: 10px;
   }
 }
 
