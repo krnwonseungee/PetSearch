@@ -33,24 +33,27 @@ header {
   margin: 25px 0px 0px 150px;
 
   .pet-box {
-  margin: 0px 25px 35px 25px;
+    margin: 0px 25px 35px 25px;
     display: inline-block;
-    padding: 0px 30px 20px 30px;
+    padding: 0px 0px 20px 00px;
     background-color: white;
 
     li {
-      list-style: none
+      list-style: none;
+      padding-left: 8px;
     }
 
     a {
       margin-top: -15px
     }
+    #prof-link {
+      float: right;
+      margin-right: 5px;
+      padding: 7px 6px
+    }
   }
 }
 
-#prof-link {
-  float: right
-}
 
 #back-link {
   float: right;
