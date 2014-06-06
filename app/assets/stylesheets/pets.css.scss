@@ -75,8 +75,13 @@ header {
 
 .general-info-box {
   margin: -180px 370px;
-  width: 800px;
-  height: 250px;
+  width: 650px;
+  height: 130px;
+  border: 1px solid;
+  border-color: #C9C2B7;
+  padding-top: 10px;
+  background-color: #FCFBF9;
+  color: #8C8181;
 
   .location-gender {
     float: left;
