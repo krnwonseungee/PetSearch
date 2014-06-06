@@ -37,8 +37,6 @@ end
 gem 'will_paginate-bootstrap'
 gem "will_paginate_mongoid"
 
-# Enable usage of Font Awesome icons
-gem 'font-awesome-sass'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
