@@ -2,9 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//Color variables
+$layout-bg: #F0EFEB;
+$lite-bg: #FCFBF9;
+$brown-table-border: #C9C2B7;
+
 // Styling for index page
 body {
-  background-color: #F0EFEB;
+  background-color: $layout-bg
 }
 
 header {
@@ -18,7 +23,7 @@ header {
   #logo {
     position: relative;
     height: 250px;
-    margin: 50px 0px 0px 10px
+    margin: 50px 0px 0px 10px;
   }
 }
 
@@ -36,7 +41,7 @@ header {
     border: 1px solid #E0DBD2;
     width: 200px;
     height: 470px;
-    background-color: #FCFBF9;
+    background-color: $lite-bg;
 
     h5, p {
       margin-left:7px
@@ -115,9 +120,9 @@ header {
   width: 650px;
   height: 130px;
   border: 1px solid;
-  border-color: #C9C2B7;
+  border-color: $brown-table-border;
   padding-top: 10px;
-  background-color: #FCFBF9;
+  background-color: $lite-bg;
   color: #494444;
 
   .location-gender {
@@ -153,7 +158,7 @@ body .description-box {
 .table-striped {
   width: 260px;
   margin: -150px 0px 20px 790px;
-  border: solid #C9C2B7;
+  border: solid $brown-table-border;
   border-width: 1px;
 
   .str-table-header {
