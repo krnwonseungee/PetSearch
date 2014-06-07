@@ -2,8 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//Color variables
+$layout-bg: #F0EFEB;
+$lite-bg: #FCFBF9;
+$brown-table-border: #C9C2B7;
+
+// Styling for index page
 body {
-  background-color: #F0EFEB;
+  background-color: $layout-bg
 }
 
 header {
@@ -17,68 +23,96 @@ header {
   #logo {
     position: relative;
     height: 250px;
-    margin: 50px 0px 0px 10px
+    margin: 50px 0px 0px 10px;
   }
-
 }
 
 #total-pets-found {
   margin-left: 10px;
   font-size: 18px;
-}
-
-.fa-circle::before {
-  font-size: 3px;
-  color: gray
+  font-weight: bold;
 }
 
 #content {
-  margin-top: 25px
-}
+  margin-top: 25px;
 
-.list {
-  margin: 25px 0px 0px 150px;
+  #filters {
+    float: left;
+    border: 1px solid #E0DBD2;
+    width: 200px;
+    height: 470px;
+    background-color: $lite-bg;
 
-  .pet-box {
-    margin: 0px 25px 35px 25px;
-    display: inline-block;
-    padding: 0px 0px 20px 00px;
-    background-color: white;
-
-    li {
-      list-style: none;
-      padding-left: 8px;
-      margin-bottom: 0px
+    h5, p {
+      margin-left:7px
     }
+  }
 
-    a {
-      margin-top: -15px
-    }
-    #prof-link {
-      float: right;
-      margin-right: 5px;
-      padding: 7px 6px;
-      background-color: #3E98D8
-    }
+  #search-bar {
+    float: right;
+    margin: -50px 5px 0px 0px;
+  }
 
-    #age-gender {
-      margin-bottom: 5px
-    }
+  .list {
+    margin: 25px 0px 0px 150px;
 
-    .species, .size {
-      display:none;
+    .pet-box {
+      margin: 0px 25px 35px 25px;
+      display: inline-block;
+      padding: 0px 0px 20px 00px;
+      background-color: white;
+
+      li {
+        list-style: none;
+        padding-left: 8px;
+        margin-bottom: 0px;
+      }
+
+      a {
+        margin-top: -15px;
+      }
+      #prof-link {
+        float: right;
+        margin-right: 5px;
+        padding: 7px 6px;
+        background-color: #3E98D8;
+      }
+
+      .fa-circle::before {
+        font-size: 3px;
+        color: gray;
+      }
+
+      #age-gender {
+        margin-bottom: 5px;
+      }
+
+      .species, .size {
+        display:none;
+      }
     }
   }
 }
 
+//Styling for Pet Profile
+#pet-name {
+  margin-left: 10%;
+
+  p {
+  font-size: 56px;
+  margin: 50px 0px 0px 300px;
+  }
+}
+
+#profile-pic {
+  width: 300px;
+  height: 250px;
+  margin: -20px 0px 0px 40px;
+}
 
 #back-link {
   float: right;
-  margin-right: 18%
-}
-
-#pet-name {
-  margin-left: 10%
+  margin-right: 18%;
 }
 
 .general-info-box {
@@ -86,9 +120,9 @@ header {
   width: 650px;
   height: 130px;
   border: 1px solid;
-  border-color: #C9C2B7;
+  border-color: $brown-table-border;
   padding-top: 10px;
-  background-color: #FCFBF9;
+  background-color: $lite-bg;
   color: #494444;
 
   .location-gender {
@@ -105,11 +139,12 @@ header {
 
   .other-contact-info {
     position: relative;
-    margin: -74px 0px 0px 400px
+    margin: -74px 0px 0px 400px;
   }
 
 }
 
+// adds "body" to override bootstrap styling
 body .description-box {
   width: 600px;
   position: relative;
@@ -120,47 +155,19 @@ body .description-box {
   }
 }
 
-#filters {
-  float: left;
-  border: 1px solid #E0DBD2;
-  width: 200px;
-  height: 470px;
-  background-color: #FCFBF9;
-
-  h5, p {
-    margin-left:7px
-  }
-}
-
-#search-bar {
-  float: right;
-  margin: -50px 5px 0px 0px;
-}
-
-#pet-name p {
-  font-size: 56px;
-  margin: 50px 0px 0px 300px;
-}
-
-#profile-pic {
-  width: 300px;
-  height: 250px;
-  margin: -20px 0px 0px 40px;
-}
-
 .table-striped {
   width: 260px;
   margin: -150px 0px 20px 790px;
-  border: solid #C9C2B7;
+  border: solid $brown-table-border;
   border-width: 1px;
 
   .str-table-header {
     padding-left: 5px;
-    font-size: 17px
+    font-size: 17px;
   }
 
   tr .key-val-row {
-    height: 10px
+    height: 10px;
   }
 
   .key {
