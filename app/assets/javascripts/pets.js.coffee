@@ -43,6 +43,10 @@ filterBySpecies = ->
   else
     radioButtonValue.charAt(0).toUpperCase() + radioButtonValue.slice(1)
 
+updateNumberResults = (numResults) ->
+  $("#total-pets-found").html "Total " + numResults + " Pets Found"
+  return
+
 $("input").click ->
   selectedButtonValues =
     size: filterBySize()
@@ -50,9 +54,12 @@ $("input").click ->
     species: filterBySpecies()
 
   pets.filter (item) ->
-    remainingPets = ((selectedButtonValues["size"] is `undefined` or item._values.size is selectedButtonValues["size"] or selectedButtonValues["size"].indexOf("ANY") > -1)) and ((selectedButtonValues["age"] is `undefined` or item._values.age is selectedButtonValues["age"] or selectedButtonValues["age"].indexOf("Any") > -1)) and ((selectedButtonValues["species"] is `undefined` or item._values.species is selectedButtonValues["species"] or selectedButtonValues["species"].indexOf("Any") > -1))
+    remainingPets = (selectedButtonValues["size"] is `undefined` or item._values.size is selectedButtonValues["size"] or selectedButtonValues["size"].indexOf("ANY") > -1) and (selectedButtonValues["age"] is `undefined` or item._values.age is selectedButtonValues["age"] or selectedButtonValues["age"].indexOf("Any") > -1) and (selectedButtonValues["species"] is `undefined` or item._values.species is selectedButtonValues["species"] or selectedButtonValues["species"].indexOf("Any") > -1)
     remainingPets
 
   totalRemainingPets = $(".pet-box").length
-  $("#total-pets-found").html "Total " + totalRemainingPets + " Pets Found"
+  updateNumberResults totalRemainingPets
   return
+
+
+
