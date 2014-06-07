@@ -15,9 +15,9 @@
 	  <form id="filters">
 	  		<h5><b>Filters:</b></h5>
 	  		<p><b>Size</b></p>
-				<p><input type="radio" name="size" value="small"> Small</p>
-				<p><input type="radio" name="size" value="medium"> Medium</p>
-				<p><input type="radio" name="size" value="large"> Large</p>
+				<p><input type="radio" name="size" value="s"> Small</p>
+				<p><input type="radio" name="size" value="m"> Medium</p>
+				<p><input type="radio" name="size" value="l"> Large</p>
 				<p><input type="radio" name="size" value="any-size"> Any Size</p>
 
 
@@ -53,7 +53,7 @@
 							<span class="gender"><%= pet.get_gender %></span>
 						</p>
 					<li>
-						<span class="size"><%= pet.get_size %></span>
+						<span class="size"><%= pet.size %></span>
 						<span class="species"><%= pet.species %></span>
 					</li>
 					</li>

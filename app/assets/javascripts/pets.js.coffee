@@ -23,7 +23,7 @@ filterBySize = ->
   if radioButtonValue is `undefined`
     `undefined`
   else
-    radioButtonValue.charAt(0).toUpperCase() + radioButtonValue.slice(1)
+    radioButtonValue.toUpperCase()
 
 filterByAge = ->
   radioButtonValue = $("input[name=\"age\"]:checked").attr("value")
@@ -45,9 +45,12 @@ $("input").click ->
     age: filterByAge()
     species: filterBySpecies()
 
+  console.log selectedButtonValues
+
 
   pets.filter (item) ->
     remainingPets = ((selectedButtonValues["size"] is `undefined` or item._values.size is selectedButtonValues["size"] or selectedButtonValues["size"].indexOf("ANY") > -1)) and ((selectedButtonValues["age"] is `undefined` or item._values.age is selectedButtonValues["age"] or selectedButtonValues["age"].indexOf("Any") > -1)) and ((selectedButtonValues["species"] is `undefined` or item._values.species is selectedButtonValues["species"] or selectedButtonValues["species"].indexOf("Any") > -1))
+    console.log item
     remainingPets
 
   totalRemainingPets = $(".pet-box").length
