@@ -11,28 +11,29 @@
 		  <input class="search">
 		  <button class="sort" data-sort="name">Search by Keyword</button>
 		</div>
-
-	  <form id="filters">
-	  		<h5><b>Filters:</b></h5>
-	  		<p><b>Size</b></p>
-				<p><input type="radio" name="size" value="s"> Small</p>
-				<p><input type="radio" name="size" value="m"> Medium</p>
-				<p><input type="radio" name="size" value="l"> Large</p>
-				<p><input type="radio" name="size" value="any-size"> Any Size</p>
-
-
-	  		<p><b>Age</b></p>
-				<p><input type="radio" name="age" value="young"> Young</p>
-				<p><input type="radio" name="age" value="adult"> Adult</p>
-				<p><input type="radio" name="age" value="senior"> Senior</p>
-				<p><input type="radio" name="age" value="any-age"> Any Age</p>
+		<div class="filter-div">
+		  <form id="filters">
+		  		<h5><b>Filters:</b></h5>
+		  		<p><b>Size</b></p>
+					<p><input type="radio" name="size" value="s"> Small</p>
+					<p><input type="radio" name="size" value="m"> Medium</p>
+					<p><input type="radio" name="size" value="l"> Large</p>
+					<p><input type="radio" name="size" value="any-size"> Any Size</p>
 
 
-	  		<p><b>Species</b></p>
-				<p><input type="radio" name="species" value="cat"> Cat</p>
-				<p><input type="radio" name="species" value="dog"> Dog</p>
-				<p><input type="radio" name="species" value="any-species"> Any species</p>
-		</form>
+		  		<p><b>Age</b></p>
+					<p><input type="radio" name="age" value="young"> Young</p>
+					<p><input type="radio" name="age" value="adult"> Adult</p>
+					<p><input type="radio" name="age" value="senior"> Senior</p>
+					<p><input type="radio" name="age" value="any-age"> Any Age</p>
+
+
+		  		<p><b>Species</b></p>
+					<p><input type="radio" name="species" value="cat"> Cat</p>
+					<p><input type="radio" name="species" value="dog"> Dog</p>
+					<p><input type="radio" name="species" value="any-species"> Any species</p>
+			</form>
+		</div>
 
 		<ul class="list">
 			<% @pets.each do |pet| %>
@@ -48,11 +49,14 @@
 							<%= "&" if pet.secondary_breed != nil %>
 						<%= pet.secondary_breed %></p></li>
 					<li>
-						<p>
+						<p id="age-gender">
 							<span class="age"><%= pet.age %></span> ·
 							<span class="gender"><%= pet.get_gender %></span>
 						</p>
-					<li><p class="size"><%= pet.get_size %></p></li>
+					<li>
+						<span class="size"><%= pet.size %></span>
+						<span class="species"><%= pet.species %></span>
+					</li>
 					</li>
 					<li>
 						<p class="location"><i class="fa fa-map-marker"></i> <%= pet.contact_city %>,
@@ -66,7 +70,5 @@
 	</div>
 
 <br>
-
-<%= link_to 'New Pet', new_pet_path %>
 
 </div>
