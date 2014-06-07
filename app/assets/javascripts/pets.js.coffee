@@ -2,10 +2,12 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+# Makes filter div sticky once DOM is loaded
 $(document).ready ->
   $(".filter-div").sticky topSpacing: 0
   return
 
+# ListJS: Creates new instance of List
 options = {
   valueNames: [ 'name', 'breed', 'age', 'gender', 'size', 'location', 'species' ],
 };
@@ -22,6 +24,7 @@ options2 = {
 
 petsPag = new List('pets', options2);
 
+# ListJS: filtering functions (by size, age, species)
 filterBySize = ->
   radioButtonValue = $("input[name=\"size\"]:checked").attr("value")
   if radioButtonValue is `undefined`
@@ -43,10 +46,12 @@ filterBySpecies = ->
   else
     radioButtonValue.charAt(0).toUpperCase() + radioButtonValue.slice(1)
 
+# Function to update number of results printed at the top of the page (total-pets-found div)
 updateNumberResults = (numResults) ->
   $("#total-pets-found").html "Total " + numResults + " Pets Found"
   return
 
+# Event handler for clicking radio buttons. Doesn't filter if a radio button isn't yet selected
 $("input").click ->
   selectedButtonValues =
     size: filterBySize()
