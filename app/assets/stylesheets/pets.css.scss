@@ -124,6 +124,36 @@ header {
   margin: -42px 0px 0px 40px;
 }
 
+#social-media {
+  position: absolute;
+  margin: -42px 0px 0px 198px;
+  background-color: #FCFBF9;
+  height: 18px;
+  -moz-opacity: 0.9;
+  -khtml-opacity: 0.9;
+  opacity: 0.9;
+
+  a:hover {
+    background-color: #EAE8E5;
+    font-color: #C9C2B7;
+  }
+
+  #soc-media-links {
+    margin: -10px 0px 0px 23px;
+    position:absolute;
+    font-size: 18px;
+
+    a {
+      padding-right: 2px;
+    }
+
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
 #back-link {
   float: right;
   margin-right: 18%;
