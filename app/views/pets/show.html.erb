@@ -66,7 +66,16 @@
 </div>
 
 <div class="recommended-pets">
-<h3>Recommended Pets</h3>
+  <h4>Recommended Pets</h4>
+  <% @recommended_pets.each do |pet| %>
+    <div class="rec-pet">
+      <%= image_tag( "http://placehold.it/200X250" , :class => "rec-pet-pic") %>
+      <div class="rec-pet-info">
+        <p><%= pet.name %></p>
+        <p><%= pet.age %> · <%= pet.get_gender.last %></p>
+      </div>
+    </div>
+  <% end %>
 </div>
 
 
