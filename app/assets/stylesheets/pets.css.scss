@@ -158,10 +158,27 @@ body .description-box {
 .recommended-pets {
   border: 1px solid;
   border-color: $brown-table-border;
-  height: 150px;
+  height: 180px;
   width: 600px;
   margin: 15px 0px 0px 125px;
   padding: 0px 0px 0px 20px;
+
+  .rec-pet {
+    display: inline-block;
+
+    .rec-pet-pic {
+      width: 75px;
+      height: 62.5px;
+      padding-top: 10px;
+    }
+
+    .rec-pet-info p {
+      font-size: 12px;
+      line-height: 3px;
+      margin-top: 10px;
+
+    }
+  }
 }
 
 .table-striped {
