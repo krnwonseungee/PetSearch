@@ -11,6 +11,8 @@ class PetsController < ApplicationController
   # GET /pets/1
   # GET /pets/1.json
   def show
+    @pet = Pet.find(params[:id])
+    @recommended_pets = Pet.where(species: @pet.species ).limit(5).to_a
   end
 
   # GET /pets/new

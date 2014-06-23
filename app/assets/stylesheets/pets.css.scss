@@ -104,10 +104,54 @@ header {
   }
 }
 
+#adopt-me-button {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  margin: -30px 0px 0px 650px;
+  background-color: #34b281;
+  border-radius: 10px;
+
+  p:first-child {
+    color: white;
+    padding: 13px;
+  }
+}
+
 #profile-pic {
   width: 300px;
   height: 250px;
-  margin: -20px 0px 0px 40px;
+  margin: -42px 0px 0px 40px;
+}
+
+#social-media {
+  position: absolute;
+  margin: -42px 0px 0px 198px;
+  background-color: #FCFBF9;
+  height: 18px;
+  -moz-opacity: 0.9;
+  -khtml-opacity: 0.9;
+  opacity: 0.9;
+
+  a:hover {
+    background-color: #EAE8E5;
+    font-color: #C9C2B7;
+  }
+
+  #soc-media-links {
+    margin: -10px 0px 0px 23px;
+    position:absolute;
+    font-size: 18px;
+
+    a {
+      padding-right: 2px;
+    }
+
+  }
+
+  p {
+    font-size: 12px;
+  }
 }
 
 #back-link {
@@ -116,7 +160,7 @@ header {
 }
 
 .general-info-box {
-  margin: -180px 370px;
+  margin: -176px 409px;
   width: 650px;
   height: 130px;
   border: 1px solid;
@@ -146,18 +190,62 @@ header {
 
 // adds "body" to override bootstrap styling
 body .description-box {
-  width: 600px;
+  width: 555px;
   position: relative;
-  margin: 270px 0px 0px 125px;
+  margin: 250px 0px 14px 295px;
 
   h2 {
     padding-left: 10px;
+  }
+
+  p {
+    margin-right: 42px;
+  }
+}
+
+.recommended-pets {
+  border: 2px solid;
+  border-color: $brown-table-border;
+  height: 163px;
+  width: 600px;
+  margin: 38px 0px 0px 125px;
+  padding: 0px 0px 0px 20px;
+  text-align: center;
+  background-color: #F2F1EF;
+
+  h4 {
+    font-size:21px;
+  }
+
+  .rec-pet {
+    display: inline-block;
+    margin-right: 20px;
+
+    .rec-pet-pic {
+      width: 86px;
+      height: 71px;
+      padding-top: 10px;
+    }
+
+    .rec-pet-info {
+      p {
+        font-size: 12px;
+        line-height: 3px;
+        margin-top: 10px;
+        text-align: center;
+        }
+
+      .name {
+        font-weight: bold;
+        font-size: 13px;
+      }
+    }
   }
 }
 
 .table-striped {
   width: 260px;
-  margin: -150px 0px 20px 790px;
+  margin: -314px 0px 20px 860px;
   border: solid $brown-table-border;
   border-width: 1px;
 

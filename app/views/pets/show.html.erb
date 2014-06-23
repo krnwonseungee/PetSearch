@@ -2,10 +2,25 @@
   <p><%= @pet.name %></p>
 </div>
 
+<div id="adopt-me-button">
+  <p>Adopt Me!</p>
+</div>
+
+
 <div id="back-link">
   <%= link_to '<< Back to Search Results', pets_path %>
 </div>
 
+<div id="social-media">
+  <p id="share-link"><a href="#"><i class="fa fa-share"></i>Share <%= @pet.name %>'s Story!</p></a>
+  <div id="soc-media-links" style="display:none">
+    <a href="#" id="facebook"><i class="fa fa-facebook-square"></i></a>
+    <a href="#" id="twitter"><i class="fa fa-twitter-square"></i></a>
+    <a href="#" id="email"><i class="fa fa-envelope"></i></a>
+    <a href="#" id="google-plus"><i class="fa fa-google-plus-square"></i></a>
+    <a href="#" id="url-link"><i class="fa fa-link"></i></a>
+  </div>
+</div>
 <%= image_tag( "http://placehold.it/200X250" , :id => "profile-pic") %>
 
 
@@ -64,6 +79,20 @@
   <h2>More About <%= @pet.name %></h2>
   <p><%= @pet.description %></p>
 </div>
+
+<div class="recommended-pets">
+  <h4>Recommended Pets</h4>
+  <% @recommended_pets.each do |pet| %>
+    <div class="rec-pet">
+      <%= image_tag( "http://placehold.it/200X250" , :class => "rec-pet-pic") %>
+      <div class="rec-pet-info">
+        <p class="name"><%= pet.name %></p>
+        <p><%= pet.age %> · <%= pet.get_gender.last %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
 
 <table class="table-striped">
     <th colspan="2" class="str-table-header">At a Glance</th>

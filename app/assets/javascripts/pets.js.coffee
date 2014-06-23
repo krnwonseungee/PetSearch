@@ -66,5 +66,14 @@ $("input").click ->
   updateNumberResults totalRemainingPets
   return
 
+  # Pet Profile: Show Social Media links/icons when User hovers over "share" link
+$("#social-media").hover (->
+  $("#soc-media-links").css "display", "inline"
+  return
+), ->
+  $("#soc-media-links").css "display", "none"
+  return
+
+
 
 
