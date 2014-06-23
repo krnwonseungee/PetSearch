@@ -2,10 +2,22 @@
   <p><%= @pet.name %></p>
 </div>
 
+<div id="adopt-me-button">
+  <p>Adopt Me!</p>
+</div>
+
+
 <div id="back-link">
   <%= link_to '<< Back to Search Results', pets_path %>
 </div>
 
+<div id="social-media">
+<i class="fa fa-facebook-square"></i>
+<i class="fa fa-twitter-square"></i>
+<i class="fa fa-envelope"></i>
+<i class="fa fa-link"></i>
+<i class="fa fa-google-plus-square"></i>
+</div>
 <%= image_tag( "http://placehold.it/200X250" , :id => "profile-pic") %>
 
 
