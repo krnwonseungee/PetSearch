@@ -155,6 +155,15 @@ body .description-box {
   }
 }
 
+.recommended-pets {
+  border: 1px solid;
+  border-color: $brown-table-border;
+  height: 150px;
+  width: 600px;
+  margin: 15px 0px 0px 125px;
+  padding: 0px 0px 0px 20px;
+}
+
 .table-striped {
   width: 260px;
   margin: -150px 0px 20px 790px;
